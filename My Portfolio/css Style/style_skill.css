@@ -1,0 +1,387 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Didact+Gothic&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,800&family=Metal+Mania&family=Poppins:ital,wght@0,100;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400&family=Sarala:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color:rgb(15, 134, 25);
+    transition: all 0.3s ease;
+}
+
+.navbar .logo:hover a{
+    color: rgb(112, 239, 14);
+    transition: all 0.8s ease-in-out;
+}
+.navbar .logo:hover a span
+{
+    color: grey;
+    transition: all 0.8s ease-in-out;
+}
+.navbar .logo:hover{
+ text-decoration: underline gold;
+ transition: all 0.8s ease-in-out;
+}
+.navbar.sticky .logo:hover a{
+    color:  gray;
+    transition: all 0.8s ease-in-out;
+}
+.navbar.sticky .logo:hover a span
+{
+    color: rgb(144, 154, 185);
+    transition: all 0.8s ease-in-out;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: rgb(108, 231, 14);
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgb(196, 77, 101);
+}
+.navbar.sticky .menu li a:hover{
+    color: rgb(22, 19, 2);
+}
+
+/* Scroll up button  */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    background: url("../img/skills/banner-skill.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .home-content{
+    position: relative;
+    left: 150px;
+    width: 80%;
+    top: 70px;
+}
+.home .home-content .text-1{
+    font-size: 80px;
+    text-align: center;
+    font-weight: 900;
+    color:rgb(117, 93, 32);
+}
+.home .home-content p{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: whitesmoke;
+    background: rgba(0,0,0,.1);
+}
+
+.knowlegde{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+
+}
+.knowlegde .video{
+    box-shadow: 30px 30px 30px rgb(130, 39, 39);
+    margin-left: 50px;
+    border: 7px solid rgb(109, 98, 40);
+    background: #555;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.knowlegde .video:hover{
+    box-shadow: 30px 30px 60px rgb(229, 222, 219);
+}
+.knowlegde .text{
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    color: #fff;
+}
+.knowlegde .text h3{
+    margin-left: 50px;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: gold;
+    margin-bottom: 20px;
+    font-family: 'Metal Mania', cursive;
+    text-shadow: 0px 7px 2px rgb(122, 9, 24);
+}
+.knowlegde .text h5{
+    font-size: 20px;
+}
+.knowlegde .text span{
+    color: pink;
+    font-size: 20px;
+}
+
+/* skills section styling */
+.skills .title{
+    color: #ef940c;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline red;
+    margin-bottom: 20px;
+}
+
+.skills .skills-content{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left img{
+    width: 200px;
+    height: 300px;
+    float: left;
+    border-radius: 2px;
+    margin: 20px;
+}
+.skills .skills-content .left{
+    margin-left: 5px;
+ 
+}
+.skills .skills-content .right{
+    margin-right: 15px;
+}
+.skills .skills-content .left .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+    font-size: 30px;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 80%;
+}
+.skills-content .right .js::before{
+    width: 60%;
+}
+.skills-content .right .jquery::before{
+    width: 85%;
+}
+.skills-content .right .php::before{
+    width: 80%;
+}
+.skills-content .right .mysql::before{
+    width: 90%;
+}
+.skills-content .right .c::before{
+    width: 90%;
+}
+.skills-content .right .bootstrap::before{
+    width: 70%;
+}
+.skills-content .right .vue::before{
+    width: 50%;
+}
+.skills-content .right .qua::before{
+    width: 60%;
+}
+.skills-content .right .sql::before{
+    width: 70%;
+}
+
+
+/* contact */
+
+#contact{
+    background: rgb(194, 135, 194);
+}
+#contact h2{
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+#contact .container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+}
+.top_contact{
+    max-width: 1000px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 7rem;
+}
+.contact_way{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.contact_way i{
+    font-size: 4rem;
+    color: #290546;
+}
+.contact_way h3{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.contact_way span{
+    color: #290546;
+}
+.bottom_contact{
+    max-width: 1000px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+}
+
+/* footer  */
+footer{
+    background: black;
+    padding: 2rem;
+    color: #f1f1f1;
+    font-size: 1rem;
+    text-align: center;
+}
+
